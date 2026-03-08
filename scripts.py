@@ -73,7 +73,8 @@ def generate_inputs(aa, frd, word_dict_inp, word_dict_out, word_dict_outr, max_l
                 t = x
                 prob = 1
             else:
-                t = word_dict_out['HHHH']
+                tn = choice(['HHHH', 'CCCC', 'EEEE'])
+                t = word_dict_out[tn]
                 prob = 0
                 y = [a for a in [ix - 4, ix + 4] if (a >= 0) and (a < len(tokens))]
                 t_fr1 = set([tokens[a] for a in y])
